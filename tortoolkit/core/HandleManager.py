@@ -644,7 +644,8 @@ async def set_password_zip(message):
 
 
 async def start_handler(event):
-    msg = "Hello This is TorToolkitX running on heroku an instance of <a href='https://github.com/KangersHub/TorToolkitX'>This Repo</a>. Try the repo for yourself and dont forget to put a STAR and fork."
+    sender = await event.get_sender()
+    msg = "Hello! " + sender.username 
     await event.reply(msg, parse_mode="html")
 
 
@@ -817,7 +818,7 @@ async def about_me(message):
         f"<b>Telethon Version</b>: {telever}\n"
         f"<b>Pyrogram Version</b>: {pyrover}\n"
         "<b>Created By</b>: @Yaknight\n\n"
-        "<b>Modified By</b>: @KangersHub\n\n"
+        "<b>Bot initiated By</b>: MRKaZ\n\n"
         "<u>Currents Configs:-</u>\n\n"
         f"<b>Bot Uptime:-</b> {diff}\n"
         "<b>Torrent Download Engine:-</b> <code>qBittorrent [4.3.0 fix active]</code> \n"
