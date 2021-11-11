@@ -376,8 +376,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
 
         if edit:
             rmess = await e.edit(
-                header
-                + "\nIts recommended to lock the group before setting vars.\n"
+                "\nIts recommended to lock the group before setting vars.\n"
                 + msg,
                 parse_mode="html",
                 buttons=menu,
@@ -385,7 +384,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             )
         else:
             rmess = await e.reply(
-                header + "\nIts recommended to lock the group before setting vars.\n",
+                "\nIts recommended to lock the group before setting vars.\n",
                 parse_mode="html",
                 buttons=menu,
                 link_preview=False,
